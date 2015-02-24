@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="restaurantPricing">
   <head>
     <meta charset="UTF-8">
     <title></title>
@@ -12,16 +12,22 @@
   </head>
   <body>
     <div class="container">
-      <h2>Fun day food!</h2>
-      <form id="pizza" ng-submit="PurchasesFactory.addPizza()">
-        <select>
-          <option ng-repeat="item in pizza">
-        </select>
-        <button class="btn btn-warning" type="submit"> Save pizza</button>
-      </form>
-        <ul>
-          <li ng-repeat="item in pizza"></li>
-        </ul>
+      <div ng-controller="PizzaCtrl">
+        <h2>Fun day food!</h2>
+        <p>
+          Pizza x {{pieces}}
+        </p>
+        <p><a ng-click="addPiece()">One more piece!</a></p>
+        <p><a ng-click="dropPiece()">One less piece!</a></p>
+        <p>{{finalPrice}}</p>
+      </div>
+      <div ng-controller="IceCreamCtrl">
+        <p>
+          Ice Cream x {{cones}}
+        </p>
+        <p><a ng-click="addCone()">One more cone!</a></p>
+        <p><a ng-click="dropCone()">One less cone!</a></p>
+      </div>
     </div>
   </body>
 </html>

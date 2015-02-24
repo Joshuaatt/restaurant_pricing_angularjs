@@ -1,7 +1,9 @@
-restaurantPricing.controller('IceCreamCtrl', function IceCreamCtrl($scope, PuchasesFactory) {
-  // $scope.purchases = PurchasesFactory.purchases;
-  // $scope.PurchasesFactory = PurchasesFactory;
-
-  $scope.iceCream = [ { name: chocolate, price: 1 }, { name: vanilla. price: 2 }];
-  
+restaurantPricing.controller('IceCreamCtrl', function IceCreamCtrl($scope, PurchasesFactory) {
+  $scope.cones = 0;
+  $scope.addCone = function() {
+    $scope.cones++;
+  };
+  $scope.dropCone = function() {
+    $scope.cones <= 0 ? $scope.cones = 0 : $scope.cones--;
+  };
 });

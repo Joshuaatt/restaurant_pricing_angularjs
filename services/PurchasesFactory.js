@@ -1,10 +1,14 @@
 restaurantPricing.factory('PurchasesFactory', function PurchasesFactory() {
   var factory = {};
-  factory.purchases = [];
+  factory.finalPrice = [];
 
-  //the final price
-  factory.finalPrice = function() {
-    var purchases = {name: , price: 0};
+  factory.calculatePrice = function(total) {
+    // var pizzaTotal = { total: factory.pieces };
+    //var iceCreamTotal = { total$scope.cones };
+    factory.finalPrice.push(parseInt(total));
 
-  }
-})
+  };
+  return factory;
+
+});
+// + parseInt(iceCreamTotal)
