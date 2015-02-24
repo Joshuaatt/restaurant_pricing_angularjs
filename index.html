@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="lib/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers/PizzaController.js"></script>
+    <script src="controllers/IceCreamController.js"></script>
+    <script src="services/PurchasesFactory.js"></script>
+    <link rel='stylesheet' href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Fun day food!</h2>
+      <form id="pizza" ng-submit="PurchasesFactory.addPizza()">
+        <select>
+          <option ng-repeat="item in pizza">
+        </select>
+        <button class="btn btn-warning" type="submit"> Save pizza</button>
+      </form>
+        <ul>
+          <li ng-repeat="item in pizza"></li>
+        </ul>
+    </div>
+  </body>
+</html>
